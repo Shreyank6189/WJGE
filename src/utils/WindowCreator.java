@@ -1,24 +1,14 @@
 package utils;
 
 import GameLoop.gameLoop;
-import models.RawModel;
-import models.TexturedModel;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
-import shaders.StaticShader;
-import textures.TextureModel;
 
 import java.nio.IntBuffer;
 
-import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.stackPush;
-
-
-
-import java.util.Objects;
 
 @SuppressWarnings("unused")
 public class WindowCreator {

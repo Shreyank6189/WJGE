@@ -7,9 +7,16 @@ public class RawModel {
     private int vaoID;
     private int vertexCount;
 
-    public RawModel(int vaoID, int vertexCount) {
+    private int id;
+    public RawModel(int vaoID, int vertexCount, Integer id) {
         this.vaoID = vaoID;
         this.vertexCount = vertexCount;
+
+    }
+
+    public void addTextureID(int id) {
+        this.id = id;
+
     }
 
 
@@ -20,6 +27,10 @@ public class RawModel {
 
     public int getVertexCount() {
         return vertexCount;
+    }
+
+    public int getTextureID(){
+        return this.id;
     }
 
 }

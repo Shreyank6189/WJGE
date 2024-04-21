@@ -1,10 +1,8 @@
 package GameLoop;
 
 import models.RawModel;
-import models.TexturedModel;
 import org.lwjgl.system.MemoryStack;
 import shaders.StaticShader;
-import textures.TextureModel;
 import utils.Loader;
 import utils.Renderer;
 import utils.WindowCreator;
@@ -55,9 +53,8 @@ public long window;
 
     public void initWindow() {
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
+        model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        TextureModel texture = new TextureModel(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
-        TexturedModel texturedModel = new TexturedModel(model, texture);
 
 
         while (!glfwWindowShouldClose(window)) {
@@ -65,7 +62,7 @@ public long window;
 
             renderer.prepare();
             shader.start();
-            renderer.render(texturedModel);
+            renderer.render(model);
             shader.stop();
 
             int width, height;
