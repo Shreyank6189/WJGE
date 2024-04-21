@@ -4,6 +4,7 @@ import models.RawModel;
 import org.lwjgl.system.MemoryStack;
 import shaders.StaticShader;
 import utils.Loader;
+import utils.ModelArray;
 import utils.Renderer;
 import utils.WindowCreator;
 
@@ -56,6 +57,8 @@ public long window;
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
 
+       // new ModelArray().addModel(model);
+       // System.out.println(model);
 
         while (!glfwWindowShouldClose(window)) {
 

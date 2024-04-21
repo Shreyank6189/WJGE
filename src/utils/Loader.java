@@ -22,6 +22,8 @@ public class Loader {
 
     private List<Integer> textures = new ArrayList<Integer>();
 
+
+
     BufferCreator buffer = new BufferCreator();
     public RawModel loadToVAO(float[] positions, float[] textureCoords, int[] indices) {
         int vaoID = buffer.genVAO();
@@ -29,7 +31,9 @@ public class Loader {
         storeDataInAttributeList(0,3, positions);
         storeDataInAttributeList(1,3, textureCoords);
         buffer.unbindVAO();
-        return new RawModel(vaoID, indices.length, null);
+        RawModel model = new RawModel(vaoID, indices.length, null);
+
+        return model;
     }
 
     public int loadTexture(String FilePath) {
