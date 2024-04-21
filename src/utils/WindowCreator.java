@@ -1,5 +1,6 @@
 package utils;
 
+import GameLoop.gameLoop;
 import models.RawModel;
 import models.TexturedModel;
 import org.lwjgl.glfw.*;
@@ -105,64 +106,21 @@ public class WindowCreator {
             // Make the window visible
             glfwShowWindow(window);
             GL.createCapabilities();
-            initWindow();
+            gameLoop loop = new gameLoop(this);
         } // the stack frame is popped automatically
     }
 
-    public void initWindow() {
-
-        RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
-        StaticShader shader = new StaticShader();
-        TextureModel texture = new TextureModel(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
-        TexturedModel texturedModel = new TexturedModel(model, texture);
-
-
-        while (!glfwWindowShouldClose(window)) {
-
-
-            renderer.prepare();
-            shader.start();
-            renderer.render(texturedModel);
-            shader.stop();
-
-            int width, height;
-            try (MemoryStack stack = stackPush()) {
-                IntBuffer pWidth = stack.mallocInt(1);
-                IntBuffer pHeight = stack.mallocInt(1);
-                glfwGetFramebufferSize(window, pWidth, pHeight);
-                width = pWidth.get(0);
-                height = pHeight.get(0);
-            }
-
-            // Update viewport
-            glViewport(0, 0, width, height);
-
-
-            glfwSwapBuffers(window); // swap the color buffers
-
-            // Poll for window events. The key callback above will only be
-            // invoked during this call.
-            glfwPollEvents();
-        }
-        shader.cleanUp();
-        cleanUp();
+    public long getWindow(){
+        return window;
     }
+
 
     public void initApp() {
         createWindow();
 
     }
 
-    public void cleanUp(){
 
-        loader.cleanUp();
-        glfwSetWindowShouldClose(window, true);
-        glfwFreeCallbacks(window);
-        glfwDestroyWindow(window);
-        glfwTerminate();
-        System.out.println("Closed!");
-        Objects.requireNonNull(glfwSetErrorCallback(null)).free();
-    }
 
 
 
