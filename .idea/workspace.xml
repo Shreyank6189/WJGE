@@ -22,12 +22,12 @@
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="SHOW_RECENT_BRANCHES" value="false" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Shreyank6189"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Shreyank6189&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -43,7 +43,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2eIaR1LPvCD4Gl4lyJ124jPj0sV" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -58,13 +58,12 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "first",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/WJGE PROJECT SAVE/WJGE/libs",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   },
   "keyToStringList": {
     "ChangesTree.GroupingKeys": [
@@ -90,15 +89,15 @@
       </method>
     </configuration>
   </component>
-  <component name="SpaceReviewFiltersPersistance"><![CDATA[{
-  "lastFilter": {
-    "state": "NeedsReview",
-    "reviewer": {
-      "id": "3v8VYU3VUax6",
-      "fullName": "Shreyank Das"
+  <component name="SpaceReviewFiltersPersistance">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;NeedsReview&quot;,
+    &quot;reviewer&quot;: {
+      &quot;id&quot;: &quot;3v8VYU3VUax6&quot;,
+      &quot;fullName&quot;: &quot;Shreyank Das&quot;
     }
   }
-}]]></component>
+}</component>
   <component name="SpaceReviewProjectSettings">
     <option name="selectedReviewProjectId" value="2Vm9Ky3lXkwM" />
   </component>
