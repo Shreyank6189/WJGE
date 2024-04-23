@@ -1,13 +1,11 @@
 package GameLoop;
 
 import models.RawModel;
+import org.joml.Vector3f;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.system.MemoryStack;
 import shaders.StaticShader;
-import utils.Loader;
-import utils.ModelArray;
-import utils.Renderer;
-import utils.WindowCreator;
+import utils.*;
 
 import java.nio.IntBuffer;
 import java.util.Objects;
@@ -42,10 +40,10 @@ public long window;
     };
 
     float[] textureCoords = {
-            0,1,
-            0,1,
-            1,1,
-            1,0
+            0, 1, // bottom-left
+            0, 1, // top-left
+            1, 1, // top-right
+            1, 0  // bottom-right
     };
     public gameLoop(WindowCreator windowcrt) {
         this.windowcrt = windowcrt;
@@ -57,7 +55,7 @@ public long window;
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-
+        Entities entity = new Entities(model,new Vector3f(1,1,1));
        // new ModelArray().addModel(model);
        // System.out.println(model);
 
@@ -66,7 +64,8 @@ public long window;
 
             renderer.prepare();
             shader.start();
-            renderer.render(model);
+            renderer.render(entity,shader);
+
             shader.stop();
 
             int width, height;
@@ -80,7 +79,6 @@ public long window;
 
             // Update viewport
             glViewport(0, 0, width, height);
-           GL30.glEnable(GL30.GL_DEPTH_TEST);
 
 
             glfwSwapBuffers(window); // swap the color buffers

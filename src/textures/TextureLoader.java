@@ -1,6 +1,7 @@
 package textures;
 
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 
 import javax.imageio.ImageIO;
@@ -47,6 +48,8 @@ public class TextureLoader {
     // Unbind the texture
     GL30.glBindTexture(GL30.GL_TEXTURE_2D, 0);
 
+
+
     System.out.println("Texture Binded and Created!");
 
     }
@@ -77,8 +80,8 @@ public class TextureLoader {
         GL11.glTexSubImage2D (GL11.GL_TEXTURE_2D, 0, GL30.GL_RGBA, image.getWidth(), Length,
                 0, GL30.GL_RGBA, GL11.GL_UNSIGNED_BYTE, buffer);
 
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_NEAREST);
-        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL11.GL_NEAREST);
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MIN_FILTER, GL11.GL_REPEAT);
+        GL11.glTexParameteri(GL11.GL_TEXTURE_2D, GL11.GL_TEXTURE_MAG_FILTER, GL20.GL_REPEAT);
 
         GL11.glBindTexture(GL11.GL_TEXTURE_2D, 0);
     }
