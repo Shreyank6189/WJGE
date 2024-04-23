@@ -1,6 +1,7 @@
 package GameLoop;
 
 import models.RawModel;
+import org.lwjgl.opengl.GL30;
 import org.lwjgl.system.MemoryStack;
 import shaders.StaticShader;
 import utils.Loader;
@@ -79,6 +80,7 @@ public long window;
 
             // Update viewport
             glViewport(0, 0, width, height);
+           GL30.glEnable(GL30.GL_DEPTH_TEST);
 
 
             glfwSwapBuffers(window); // swap the color buffers

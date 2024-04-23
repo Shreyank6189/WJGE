@@ -4,8 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import org.joml.Vector3f;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL20;
+import org.lwjgl.opengl.GL30;
 
 public abstract class ShaderProgram {
 
@@ -22,8 +24,19 @@ public abstract class ShaderProgram {
         bindAttributes();
         GL20.glLinkProgram(programID);
         GL20.glValidateProgram(programID);
+        getAllUniformLocation(
+
+        );
     }
 
+protected abstract void getAllUniformLocation();
+
+        protected int getUniformLocation(String uniform){
+        return GL30.glGetUniformLocation(programID, uniform);
+
+
+
+    }
     public void start(){
         GL20.glUseProgram(programID);
     }
@@ -47,6 +60,13 @@ public abstract class ShaderProgram {
         GL20.glBindAttribLocation(programID, attribute, variableName);
     }
 
+    protected void loadFloat(int location, float value){
+        GL20.glUniform1f(location, value);
+    }
+
+    protected void loadVector(int location, Vector3f vector){
+        GL20.glUniform3f(location, vector.x, vector.y, vector.z);
+    }
     private static int loadShader(String file, int type){
         StringBuilder shaderSource = new StringBuilder();
         try{
