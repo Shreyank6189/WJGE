@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="t">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/ShaderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/ShaderProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Entities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/FastNoiseLite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/FastNoiseLite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713906491001</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="t">
+      <option name="closed" value="true" />
+      <created>1713917133517</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713917133517</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

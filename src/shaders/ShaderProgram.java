@@ -12,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
+import org.lwjgl.system.MemoryStack;
 
 public abstract class ShaderProgram {
 
@@ -19,7 +20,6 @@ public abstract class ShaderProgram {
     private int vertexShaderID;
     private int fragmentShaderID;
 
-    private  static FloatBuffer matrixBuffer = BufferUtils.createFloatBuffer((20));
 
     public ShaderProgram(String vertexFile,String fragmentFile){
         vertexShaderID = loadShader(vertexFile,GL20.GL_VERTEX_SHADER);
@@ -84,9 +84,11 @@ protected abstract void getAllUniformLocation();
 
     protected void loadMatrix(int location, Matrix4f matrix){
 
-        matrix.get(matrixBuffer);
-        matrixBuffer.flip();
-         GL20.glUniformMatrix4fv(location, false, matrixBuffer);
+        try(var stack = MemoryStack.stackPush()) {
+            var buffer = stack.mallocFloat(4 * 4);
+            matrix.get(buffer);
+            GL20.glUniformMatrix4fv(location, false, buffer);
+        }
 
 
     }
