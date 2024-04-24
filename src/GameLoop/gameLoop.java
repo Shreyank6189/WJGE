@@ -7,6 +7,7 @@ import org.lwjgl.system.MemoryStack;
 import shaders.StaticShader;
 import utils.*;
 
+import javax.swing.text.html.parser.Entity;
 import java.nio.IntBuffer;
 import java.util.Objects;
 
@@ -55,7 +56,8 @@ public long window;
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        Entities entity = new Entities(model,new Vector3f(1,1,1));
+        Entities entity = new Entities(model,new Vector3f(0.5f,0,0));
+        entity.rotate(100,100,0);
        // new ModelArray().addModel(model);
        // System.out.println(model);
 

@@ -2,6 +2,7 @@ package utils;
 
 import models.RawModel;
 import org.joml.Matrix4f;
+import org.joml.Quaternionfc;
 import org.joml.Vector3f;
 
 public class Entities {
@@ -21,14 +22,21 @@ public class Entities {
         transformationMatrix.identity().translate(pos, transformationMatrix);
     }
 
-    public void scale(float scaleX, float scaleY, float scaleZ) {
-        Matrix4f scaleMatrix = new Matrix4f().scale(scaleX, scaleY, scaleZ);
-        this.transformationMatrix.mul(scaleMatrix);
+    public void scale(Vector3f scale) {
+        transformationMatrix.scale(scale);
     }
 
     public Matrix4f getTransformationMatrix() {
 
         return transformationMatrix;
+
+    }
+
+    public void rotate(float rx,float ry, float rz){
+        transformationMatrix.rotate((float) java.lang.Math.toRadians(rx),new Vector3f(1,0,0));
+        transformationMatrix.rotate((float) java.lang.Math.toRadians(ry),new Vector3f(0,1,0));
+        transformationMatrix.rotate((float) java.lang.Math.toRadians(rz),new Vector3f(0,0,1));
+
 
     }
 
