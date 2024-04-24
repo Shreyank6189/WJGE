@@ -27,7 +27,9 @@ public class Entities {
     }
 
     public Matrix4f getTransformationMatrix() {
-        return this.transformationMatrix;
+
+        return transformationMatrix;
+
     }
 
 
@@ -37,6 +39,6 @@ public class Entities {
  }
 
  public Matrix4f getScale(){
-        return transformationMatrix ;
+         return transformationMatrix ;
  }
 }
