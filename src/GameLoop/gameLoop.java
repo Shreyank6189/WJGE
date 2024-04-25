@@ -8,13 +8,14 @@ import shaders.StaticShader;
 import utils.*;
 
 import javax.swing.text.html.parser.Entity;
+import java.io.IOException;
 import java.nio.IntBuffer;
 import java.util.Objects;
 
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.glfw.GLFW.glfwPollEvents;
-import static org.lwjgl.opengl.GL11.glViewport;
+import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryStack.stackPush;
 
 
@@ -52,12 +53,11 @@ public long window;
         initWindow();
     }
 
-    public void initWindow() {
+    public void initWindow()  {
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        Entities entity = new Entities(model,new Vector3f(0.5f,0,0));
-        entity.rotate(100,100,0);
+        Entities entity = new Entities("C:\\WJGE PROJECT SAVE\\WJGE\\res\\Burning_Cube[1].obj",new Vector3f(0.1f,0,0));
        // new ModelArray().addModel(model);
        // System.out.println(model);
 
@@ -78,7 +78,7 @@ public long window;
                 width = pWidth.get(0);
                 height = pHeight.get(0);
             }
-
+glEnable(GL_LIGHTING);
             // Update viewport
             glViewport(0, 0, width, height);
 

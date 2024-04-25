@@ -5,6 +5,8 @@ import org.joml.Matrix4f;
 import org.joml.Quaternionfc;
 import org.joml.Vector3f;
 
+import java.io.IOException;
+
 public class Entities {
 
     private RawModel model;
@@ -18,6 +20,19 @@ public class Entities {
         this.model = model;
     }
 
+    public Entities(String modelPath, Vector3f pos) {
+       try{
+
+        model = new RawModel(new OBJLoader().OBJLoader(modelPath));
+           transformationMatrix = new Matrix4f().identity(); // Added transformation matrix initialization
+           transformationMatrix.translate(pos, transformationMatrix);
+
+
+
+       } catch (IOException e) {
+           throw new RuntimeException(e);
+       }
+    }
     public void setPosition(Vector3f pos) {
         transformationMatrix.identity().translate(pos, transformationMatrix);
     }
@@ -50,3 +65,4 @@ public class Entities {
          return transformationMatrix ;
  }
 }
+

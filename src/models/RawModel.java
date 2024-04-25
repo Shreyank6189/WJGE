@@ -14,6 +14,10 @@ public class RawModel {
 
     }
 
+    public RawModel(RawModel rawModel) {
+    }
+
+
     public void addTextureID(int id) {
         this.id = id;
 
