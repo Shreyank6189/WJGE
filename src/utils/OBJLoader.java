@@ -10,11 +10,12 @@ import java.util.ArrayList;
 
 public class OBJLoader{
 
+
     ArrayList<Float> vertices = new ArrayList<>();
     ArrayList<Float> vertexnormals = new ArrayList<>();
     ArrayList<Integer> faces = new ArrayList<>();
     ArrayList<Float> texturevertexes = new ArrayList<>();
-    public RawModel OBJLoader(String path) throws IOException {
+    public RawModel loadOBJ (String path) throws IOException {
 
 
         try {
@@ -24,7 +25,7 @@ public class OBJLoader{
         BufferedReader bufferedReader = new BufferedReader(fr);
 
         String line = null;
-        while (line == bufferedReader.readLine()) {
+            while ((line = bufferedReader.readLine()) != null) {
             if (line.startsWith("v ")) {
                 String[] tokens = line.split("\\s+");
                 vertices.add(Float.parseFloat(tokens[1]));
@@ -37,26 +38,35 @@ public class OBJLoader{
                 vertexnormals.add(Float.parseFloat(tokens[3]));
             } else if (line.startsWith("f ")) {
                 String[] tokens = line.split("\\s+");
-              faces.add(Integer.parseInt(tokens[1]));
-                faces.add(Integer.parseInt(tokens[2]));
-                faces.add(Integer.parseInt(tokens[3]));
+                for (int i = 1; i < tokens.length; i++) {
+                    String[] parts = tokens[i].split("/");
+                    faces.add(Integer.parseInt(parts[0]));
+                }
             } else if (line.startsWith("vt ")) {
                 String[] tokens = line.split("\\s+");
                 texturevertexes.add(Float.parseFloat(tokens[1]));
                 texturevertexes.add(Float.parseFloat(tokens[2]));
-                texturevertexes.add(Float.parseFloat(tokens[3]));
 
             }
         }
+            float[] verticesArray = new float[vertices.size()];
+            int[] indicesArray = new int[faces.size()];
+            float[] texturevertexArray = new float[texturevertexes.size()];
 
-            float[] vertice = new float[vertices.size()];
-            Float[] vertexnormal = new Float[vertexnormals.size()];
-            float[] texturevertices = new float[texturevertexes.size()];
-            int[] indeces = new int[faces.size()];
+            for (int i = 0; i < vertices.size(); i++) {
+                verticesArray[i] = vertices.get(i);
+            }
+            for (int i = 0; i < faces.size(); i++) {
+                indicesArray[i] = faces.get(i);
+            }
+            for (int i = 0; i < texturevertexes.size(); i++) {
+                texturevertexArray[i] = texturevertexes.get(i);
+            }
+
+
             Loader loader = new Loader();
-            RawModel rawModel = new RawModel(loader.loadToVAO(vertice, texturevertices, indeces));
+            RawModel rawModel = new RawModel(loader.loadToVAO(verticesArray, texturevertexArray, indicesArray));
             return rawModel;
-
         } catch (IOException | NumberFormatException e) {
             throw new RuntimeException(e);
 

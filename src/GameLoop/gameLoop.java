@@ -2,8 +2,11 @@ package GameLoop;
 
 import models.RawModel;
 import org.joml.Vector3f;
+import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
+import org.lwjgl.system.APIUtil;
 import org.lwjgl.system.MemoryStack;
+import org.lwjglx.debug.org.lwjgl.opengl.GLUtil;
 import shaders.StaticShader;
 import utils.*;
 
@@ -15,7 +18,9 @@ import java.util.Objects;
 import static org.lwjgl.glfw.Callbacks.glfwFreeCallbacks;
 import static org.lwjgl.glfw.GLFW.*;
 import static org.lwjgl.glfw.GLFW.glfwPollEvents;
-import static org.lwjgl.opengl.GL11.*;
+import org.lwjgl.opengl.GL11C;
+import static org.lwjgl.opengl.GL43.*;
+
 import static org.lwjgl.system.MemoryStack.stackPush;
 
 
@@ -54,12 +59,13 @@ public long window;
     }
 
     public void initWindow()  {
-        RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
-        model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        Entities entity = new Entities("C:\\WJGE PROJECT SAVE\\WJGE\\res\\Burning_Cube[1].obj",new Vector3f(0.1f,0,0));
-       // new ModelArray().addModel(model);
-       // System.out.println(model);
+
+        glfwWindowHint( GLFW_OPENGL_DEBUG_CONTEXT, GL_TRUE );
+        GLUtil.setupDebugMessageCallback(System.err);
+        glEnable(GL_DEBUG_OUTPUT_SYNCHRONOUS);
+        Entities entity = new Entities("C:\\WJGE PROJECT SAVE\\WJGE\\res\\stylized minecraft wolf-Mesh 913939.obj",new Vector3f(0.5f,0,0));
+        entity.addTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png");
 
         while (!glfwWindowShouldClose(window)) {
 
@@ -78,7 +84,6 @@ public long window;
                 width = pWidth.get(0);
                 height = pHeight.get(0);
             }
-glEnable(GL_LIGHTING);
             // Update viewport
             glViewport(0, 0, width, height);
 

@@ -5,6 +5,7 @@ import org.joml.Matrix4f;
 import org.joml.Quaternionfc;
 import org.joml.Vector3f;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Entities {
@@ -21,24 +22,27 @@ public class Entities {
     }
 
     public Entities(String modelPath, Vector3f pos) {
-       try{
-
-        model = new RawModel(new OBJLoader().OBJLoader(modelPath));
-           transformationMatrix = new Matrix4f().identity(); // Added transformation matrix initialization
-           transformationMatrix.translate(pos, transformationMatrix);
-
-
-
-       } catch (IOException e) {
-           throw new RuntimeException(e);
-       }
+        try {
+            OBJLoader objLoader = new OBJLoader();
+            RawModel model = objLoader.loadOBJ(modelPath);
+            this.model = model;
+            transformationMatrix = new Matrix4f().identity().translate(pos);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
     public void setPosition(Vector3f pos) {
         transformationMatrix.identity().translate(pos, transformationMatrix);
     }
 
     public void scale(Vector3f scale) {
         transformationMatrix.scale(scale);
+    }
+
+    public void addTexture(String path){
+        Loader loader = new Loader();
+       model.addTextureID(loader.loadTexture(path));
     }
 
     public Matrix4f getTransformationMatrix() {

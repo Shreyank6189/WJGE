@@ -8,6 +8,9 @@ import java.util.ArrayList;
 
 import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_DEPTH_BUFFER_BIT;
+import static org.lwjgl.opengl.GL13.GL_TEXTURE0;
+import static org.lwjgl.opengl.GL13C.glActiveTexture;
+
 
 public class Renderer {
 
@@ -29,8 +32,11 @@ public class Renderer {
             GL20.glEnableVertexAttribArray(0);
             GL20.glEnableVertexAttribArray(1);
             shader.loadTransformationMatrix(entities.getTransformationMatrix());
-            GL13.glActiveTexture(GL13.GL_TEXTURE);
-            GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.getTextureID());
+        // Enable texture unit 0
+        glActiveTexture(GL_TEXTURE0);
+
+
+        GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.getTextureID());
             GL11.glDrawElements(GL11.GL_TRIANGLES, model.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);
 
             GL20.glDisableVertexAttribArray(0);
