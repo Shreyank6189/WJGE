@@ -58,10 +58,9 @@ public long window;
         StaticShader shader = new StaticShader();
         Renderer renderer = new Renderer(shader, windowcrt);
         EntitieList entitieList = new EntitieList();
-        Entities entity = new Entities(model,new Vector3f(0.5f,0,0),entitieList);
-       // new ModelArray().addModel(model);
-       // System.out.println(model);
 
+        Entities entity = new Entities(model,new Vector3f(0.5f,0,0),entitieList);
+        entity.scale(new Vector3f(3,1,0));
         while (!glfwWindowShouldClose(window)) {
             Camera camera = new Camera(1,1,1,window, entitieList);
 

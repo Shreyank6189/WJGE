@@ -12,6 +12,8 @@ public class Entities {
     Vector3f position = new Vector3f();
     private Matrix4f transformationMatrix;
 
+    Vector3f prevScale = new Vector3f();
+
     public Entities(RawModel model, Vector3f pos, EntitieList list) {
         this.model = model;
         list.entetieslist.add(this);
@@ -27,7 +29,10 @@ public class Entities {
     }
 
     public void scale(Vector3f scale) {
+        transformationMatrix.identity();
+        prevScale = scale;
         transformationMatrix.scale(scale);
+
     }
 
     public Matrix4f getTransformationMatrix() {
@@ -55,10 +60,16 @@ public class Entities {
  }
 
 public void increasPos(float x, float y, float z){
-        position.x+=x;
-        position.y+=y;
-        position.z+=z;
+
+
     transformationMatrix.identity();
+    transformationMatrix.scale(prevScale);
+
+    position.x+=x;
+    position.y+=y;
+    position.z+=z;
+
+
     transformationMatrix.translate(position, transformationMatrix);
 
 
@@ -66,3 +77,14 @@ public void increasPos(float x, float y, float z){
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
