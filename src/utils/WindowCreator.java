@@ -33,9 +33,10 @@ public class WindowCreator {
     };
 
     Loader loader = new Loader();
-    Renderer renderer = new Renderer();
 
 
+public int windowWidth;
+public int windowHeight;
     private long window;
 
     public void createWindow() {
@@ -50,8 +51,8 @@ public class WindowCreator {
         int screenHeight = vidmode.height();
 
         // Calculate the window size based on the maximum screen ratio
-        int windowWidth = screenWidth; // Adjust this ratio as needed
-        int windowHeight = screenHeight; // Adjust this ratio as needed
+        windowWidth = screenWidth; // Adjust this ratio as needed
+        windowHeight = screenHeight; // Adjust this ratio as needed
 
         // Configure GLFW
         glfwDefaultWindowHints();
@@ -110,9 +111,11 @@ public class WindowCreator {
 
     }
 
+    public int getWindowHeight() {
+        return windowHeight;
+    }
 
-
-
-
-
+    public int getWindowWidth() {
+        return windowWidth;
+    }
 }

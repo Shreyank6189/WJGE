@@ -8,6 +8,8 @@ out vec3 colour;
 out vec2 pass_textureCoords;
 
 uniform mat4 transformationMatrix;
+uniform mat4 projectionMatrix;
+
 
 
 void main(){

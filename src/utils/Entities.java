@@ -9,12 +9,16 @@ public class Entities {
 
     private RawModel model;
 
+    Vector3f position = new Vector3f();
     private Matrix4f transformationMatrix;
 
-    public Entities(RawModel model, Vector3f pos) {
+    public Entities(RawModel model, Vector3f pos, EntitieList list) {
         this.model = model;
+        list.entetieslist.add(this);
+        System.out.println(this);
+        position = pos;
         transformationMatrix = new Matrix4f().identity();
-        transformationMatrix.translate(pos, transformationMatrix);
+        transformationMatrix.translate(position, transformationMatrix);
         this.model = model;
     }
 
@@ -49,4 +53,16 @@ public class Entities {
  public Matrix4f getScale(){
          return transformationMatrix ;
  }
+
+public void increasPos(float x, float y, float z){
+        position.x+=x;
+        position.y+=y;
+        position.z+=z;
+    transformationMatrix.identity();
+    transformationMatrix.translate(position, transformationMatrix);
+
+
+}
+
+
 }

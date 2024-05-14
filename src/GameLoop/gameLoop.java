@@ -1,5 +1,6 @@
 package GameLoop;
 
+import com.sun.javafx.scene.EnteredExitedHandler;
 import models.RawModel;
 import org.joml.Vector3f;
 import org.lwjgl.opengl.GL30;
@@ -23,7 +24,6 @@ public class gameLoop {
 
     Loader loader = new Loader();
 
-Renderer renderer = new Renderer();
 WindowCreator windowcrt;
 
 public long window;
@@ -56,17 +56,18 @@ public long window;
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        Entities entity = new Entities(model,new Vector3f(0.5f,0,0));
-        entity.rotate(100,100,0);
+        Renderer renderer = new Renderer(shader, windowcrt);
+        EntitieList entitieList = new EntitieList();
+        Entities entity = new Entities(model,new Vector3f(0.5f,0,0),entitieList);
        // new ModelArray().addModel(model);
        // System.out.println(model);
 
         while (!glfwWindowShouldClose(window)) {
-
+            Camera camera = new Camera(1,1,1,window, entitieList);
 
             renderer.prepare();
             shader.start();
-            renderer.render(entity,shader);
+            renderer.render(entitieList.entetieslist,shader);
 
             shader.stop();
 
