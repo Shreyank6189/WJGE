@@ -56,13 +56,12 @@ public long window;
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
         model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
         StaticShader shader = new StaticShader();
-        Renderer renderer = new Renderer(shader, windowcrt);
         EntitieList entitieList = new EntitieList();
 
-        Entities entity = new Entities(model,new Vector3f(0.5f,0,0),entitieList);
-        entity.scale(new Vector3f(3,1,0));
+        Entities entity1 = new Entities(model,new Vector3f(0,0,0), entitieList);
         while (!glfwWindowShouldClose(window)) {
-            Camera camera = new Camera(1,1,1,window, entitieList);
+            Camera camera = new Camera(1,1,1,window, entitieList, windowcrt);
+            Renderer renderer = new Renderer(shader, windowcrt, camera);
 
             renderer.prepare();
             shader.start();

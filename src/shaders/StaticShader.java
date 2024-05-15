@@ -33,7 +33,7 @@ public void loadTransformationMatrix(Matrix4f matrix4f){
 }
 
 public void loadprojectionMatrix(Matrix4f matrix4f){
-        super.loadMatrix(location_projectionMatrix,matrix4f);
+        super.loadProjectionMatrix(location_projectionMatrix,matrix4f);
     }
 
 }

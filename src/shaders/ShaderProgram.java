@@ -92,6 +92,17 @@ protected abstract void getAllUniformLocation();
 
 
     }
+    protected void loadProjectionMatrix(int location, Matrix4f matrix){
+
+        try(var stack = MemoryStack.stackPush()) {
+            var buffer = stack.mallocFloat(4 * 4);
+            matrix.get(buffer);
+            System.out.println(matrix);
+            GL20.glUniformMatrix4fv(location, false, buffer);
+        }
+
+
+    }
 
     private static int loadShader(String file, int type){
         StringBuilder shaderSource = new StringBuilder();

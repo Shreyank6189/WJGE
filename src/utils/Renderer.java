@@ -7,6 +7,7 @@ import shaders.StaticShader;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.lang.Math;
 
 import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
 import static org.lwjgl.opengl.GL11.GL_DEPTH_BUFFER_BIT;
@@ -21,11 +22,12 @@ public class Renderer {
 
     WindowCreator window;
 
+    Matrix4f transformationMatrix;
+
     public Matrix4f projectionMatrix;
 
-    public Renderer(StaticShader shader, WindowCreator window){
-        this.window = window;
-        createProjectionMatrix();
+    public Renderer(StaticShader shader, WindowCreator window, Camera cam){
+        projectionMatrix = cam.getProjectionMatrix();
         shader.start();
         shader.loadprojectionMatrix(projectionMatrix);
         shader.stop();
@@ -46,7 +48,9 @@ public class Renderer {
             GL30.glBindVertexArray(model.getVaoID());
             GL20.glEnableVertexAttribArray(0);
             GL20.glEnableVertexAttribArray(1);
-            shader.loadTransformationMatrix(entitie.getTransformationMatrix());
+            transformationMatrix = entitie.getTransformationMatrix();
+
+            shader.loadTransformationMatrix(transformationMatrix);
             GL13.glActiveTexture(GL13.GL_TEXTURE);
             GL11.glBindTexture(GL11.GL_TEXTURE_2D, model.getTextureID());
             GL11.glDrawElements(GL11.GL_TRIANGLES, model.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);
@@ -60,18 +64,13 @@ public class Renderer {
 
 
     private void createProjectionMatrix(){
-        float aspectRatio = (float)  window.getWindowWidth() / (float) window.getWindowHeight();
-        float y_scale = (float) ((1f / java.lang.Math.tan(java.lang.Math.toRadians(FOV / 2f))) * aspectRatio);
-        float x_scale = y_scale / aspectRatio;
-        float frustum_length = FAR_PLANE - NEAR_PLANE;
-
         projectionMatrix = new Matrix4f();
-        projectionMatrix.m00(x_scale);
-        projectionMatrix.m11(y_scale);
-        projectionMatrix.m22(-((FAR_PLANE + NEAR_PLANE) / frustum_length));
-        projectionMatrix.m23(-1);
-        projectionMatrix.m32(-((2 * NEAR_PLANE * FAR_PLANE) / frustum_length));
-        projectionMatrix.m33(0);
+       projectionMatrix.identity();
+        float fov = (float) Math.toRadians(90.0f);
+        float zFar = 0.1f;
+        float zNear = 100.0f;
+        projectionMatrix.perspective(fov, (float) window.getWindowWidth() / (float) window.getWindowHeight(),zNear, zFar);
+
     }
 
 
