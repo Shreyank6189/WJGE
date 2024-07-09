@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="added a inprogress camera">
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/ShaderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/ShaderProgram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Entities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Entities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/KeyInvoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/KeyInvoke.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OBJLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/OBJLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +68,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;ChangesTree.GroupingKeys&quot;: [
@@ -230,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715691309847</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added a inprogress camera">
+      <option name="closed" value="true" />
+      <created>1715777550587</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1715777550587</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,9 +245,9 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="1 type of model now (RawModel.class) this model still able to have an texture. Split the loop in the WindowCreator.class to the gameLoop.class" />
     <MESSAGE value="t" />
-    <MESSAGE value="added a inprogress camera" />
     <MESSAGE value="FIXING MOVING SYSTEM" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIXING MOVING SYSTEM" />
+    <MESSAGE value="added a inprogress camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a inprogress camera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,11 +266,6 @@
           <url>file://$PROJECT_DIR$/src/utils/KeyInvoke.java</url>
           <line>22</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/utils/Camera.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

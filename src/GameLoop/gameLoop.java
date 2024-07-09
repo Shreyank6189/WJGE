@@ -102,6 +102,6 @@ public long window;
         glfwTerminate();
         System.out.println("Closed!");
         Objects.requireNonNull(glfwSetErrorCallback(null)).free();
-    }
+           }
 
 }
