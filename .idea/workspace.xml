@@ -4,10 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="added a inprogress camera">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" afterDir="false" />
+    <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="organizing everything">
+      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/ProjectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Camera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/KeyInvoke.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/KeyInvoke.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid46544.log" beforeDir="false" afterPath="$PROJECT_DIR$/hs_err_pid46544.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/KeyInvoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/KeyInvoke.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/OBJLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/OBJLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +49,21 @@
     &quot;assignee&quot;: &quot;Shreyank6189&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="f4ca7beb-bc13-4f0d-b4a3-dd67bf4a8ba8" />
-        <option name="url" value="git@github.com:Shreyank6189/WJGE.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Shreyank6189/WJGE.git&quot;,
+    &quot;accountId&quot;: &quot;7802676a-1b1a-4b85-8156-f5c10cab1710&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -60,15 +82,22 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.WJGE.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/WJGE PROJECT SAVE/WJGE/libs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/WJGE PROJECT SAVE/WJGE&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;ChangesTree.GroupingKeys&quot;: [
@@ -86,18 +115,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.WJGE">
     <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.WJGE" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -121,6 +154,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711594534093</updated>
+      <workItem from="1720534629029" duration="741000" />
+      <workItem from="1720535475135" duration="4603000" />
+      <workItem from="1720606385801" duration="12206000" />
+      <workItem from="1720700830315" duration="3484000" />
+      <workItem from="1720704924173" duration="513000" />
+      <workItem from="1720705450059" duration="1720000" />
+      <workItem from="1720822795179" duration="128000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -229,6 +269,9 @@
     <option name="localTasksCounter" value="14" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -247,7 +290,8 @@
     <MESSAGE value="t" />
     <MESSAGE value="FIXING MOVING SYSTEM" />
     <MESSAGE value="added a inprogress camera" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a inprogress camera" />
+    <MESSAGE value="organizing everything" />
+    <option name="LAST_COMMIT_MESSAGE" value="organizing everything" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,5 +324,9 @@
         <watch expression="((Loader)((WindowCreator)this).loader).textures" custom="utils.WindowCreator,utils.Loader" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

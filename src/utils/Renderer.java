@@ -26,7 +26,7 @@ public class Renderer {
 
     public Matrix4f projectionMatrix;
 
-    public Renderer(StaticShader shader, WindowCreator window, Camera cam){
+    public Renderer(StaticShader shader, WindowCreator window, ProjectionManager cam){
         projectionMatrix = cam.getProjectionMatrix();
         shader.start();
         shader.loadprojectionMatrix(projectionMatrix);

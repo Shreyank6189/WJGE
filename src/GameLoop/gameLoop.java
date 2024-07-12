@@ -60,8 +60,8 @@ public long window;
 
         Entities entity1 = new Entities(model,new Vector3f(0,0,0), entitieList);
         while (!glfwWindowShouldClose(window)) {
-            Camera camera = new Camera(1,1,1,window, entitieList, windowcrt);
-            Renderer renderer = new Renderer(shader, windowcrt, camera);
+            ProjectionManager projectionManager = new ProjectionManager(window, entitieList, windowcrt);
+            Renderer renderer = new Renderer(shader, windowcrt, projectionManager);
 
             renderer.prepare();
             shader.start();

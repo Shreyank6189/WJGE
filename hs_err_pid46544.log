@@ -34,10 +34,10 @@ C  [lwjgl_opengl.dll+0xfbdd]  (no source info available)
 Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
 j  org.lwjgl.opengl.GL30C.nglGenVertexArrays(IJ)V+0
 j  org.lwjgl.opengl.GL30C.glGenVertexArrays()I+20
-j  org.lwjgl.opengl.GL30.glGenVertexArrays()I+0
-j  utils.Loader.createVAO()I+0
-j  utils.Loader.LoadToVAO([F)Lutils/RawModel;+1
-j  utils.WindowCreator.<init>()V+23
+j  org.lwjgl.opaengl.GL30.glGenVertexArrays()I+0
+                    j  utils.Loader.creteVAO()I+0
+j  utils.LoowCreaader.LoadToVAO([F)Lutils/RawModel;+1
+                   j  utils.Windtor.<init>()V+23
 j  Main.Main.main([Ljava/lang/String;)V+56
 v  ~StubRoutines::call_stub 0x00000199dd67100d
 
