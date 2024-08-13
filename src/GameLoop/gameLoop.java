@@ -27,24 +27,83 @@ public class gameLoop {
 WindowCreator windowcrt;
 
 public long window;
-
     float[] vertices = {
-            -0.5f, 0.5f, 0f,//v0
-            -0.5f, -0.5f, 0f,//v1
-            0.5f, -0.5f, 0f,//v2
-            0.5f, 0.5f, 0f,//v3
-    };
+            -0.5f,0.5f,-0.5f,
+            -0.5f,-0.5f,-0.5f,
+            0.5f,-0.5f,-0.5f,
+            0.5f,0.5f,-0.5f,
 
-    int[] indices = {
-            0,1,3,//top left triangle (v0, v1, v3)
-            3,1,2//bottom right triangle (v3, v1, v2)
+            -0.5f,0.5f,0.5f,
+            -0.5f,-0.5f,0.5f,
+            0.5f,-0.5f,0.5f,
+            0.5f,0.5f,0.5f,
+
+            0.5f,0.5f,-0.5f,
+            0.5f,-0.5f,-0.5f,
+            0.5f,-0.5f,0.5f,
+            0.5f,0.5f,0.5f,
+
+            -0.5f,0.5f,-0.5f,
+            -0.5f,-0.5f,-0.5f,
+            -0.5f,-0.5f,0.5f,
+            -0.5f,0.5f,0.5f,
+
+            -0.5f,0.5f,0.5f,
+            -0.5f,0.5f,-0.5f,
+            0.5f,0.5f,-0.5f,
+            0.5f,0.5f,0.5f,
+
+            -0.5f,-0.5f,0.5f,
+            -0.5f,-0.5f,-0.5f,
+            0.5f,-0.5f,-0.5f,
+            0.5f,-0.5f,0.5f
+
     };
 
     float[] textureCoords = {
-            0, 1, // bottom-left
-            0, 1, // top-left
-            1, 1, // top-right
-            1, 0  // bottom-right
+
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+            0,0,
+            0,1,
+            1,1,
+            1,0
+
+
+    };
+
+    int[] indices = {
+            0,1,3,
+            3,1,2,
+            4,5,7,
+            7,5,6,
+            8,9,11,
+            11,9,10,
+            12,13,15,
+            15,13,14,
+            16,17,19,
+            19,17,18,
+            20,21,23,
+            23,21,22
+
     };
     public gameLoop(WindowCreator windowcrt) {
         this.windowcrt = windowcrt;
@@ -54,9 +113,11 @@ public long window;
 
     public void initWindow() {
         RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
-        model.addTextureID(loader.loadTexture("C:\\WJGE PROJECT SAVE\\WJGE\\res\\OIP.png"));
+
+        model.addTextureID(loader.loadTexture("res/OIP.png"));
         StaticShader shader = new StaticShader();
         EntitieList entitieList = new EntitieList();
+
 
         Entities entity1 = new Entities(model,new Vector3f(0,0,0), entitieList);
         while (!glfwWindowShouldClose(window)) {

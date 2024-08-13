@@ -5,9 +5,9 @@ import org.joml.Matrix4f;
 import org.lwjgl.opengl.GL15;
 
 public class StaticShader extends ShaderProgram{
-
-    private static final String VERTEX_FILE = "C:\\WJGE PROJECT SAVE\\WJGE\\src\\shaders\\vertexShader.glsl";
-    private static final String FRAGMENT_FILE = "C:\\WJGE PROJECT SAVE\\WJGE\\src\\shaders\\fragmentShader.glsl";
+ public static final String workingDirectory = System.getProperty("user.dir");
+    private static final String VERTEX_FILE = "src/shaders/vertexShader.glsl";
+    private static final String FRAGMENT_FILE = "src/shaders/fragmentShader.glsl";
 
     private int location_transformationMatrix;
     private int location_projectionMatrix;

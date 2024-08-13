@@ -1,8 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Main" type="Application" factoryName="Applicat
-  ion" nameIsGenerated="true">
-    <option name="ALTERNATIVE_JRE_PATH" value="22 (3)" />
-    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+  <configuration default="false" name="WJGE" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="Main.Main" />
     <module name="WJGE" />
     <shortenClasspath name="ARGS_FILE" />

@@ -4,6 +4,7 @@ import GameLoop.gameLoop;
 import org.lwjgl.glfw.*;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
+import org.lwjgl.system.Platform;
 
 import java.nio.IntBuffer;
 
@@ -41,10 +42,27 @@ public int windowHeight;
 
     public void createWindow() {
         GLFWErrorCallback.createPrint(System.err).set();
+        if (Platform.get() == Platform.LINUX) {
+            String sessionType = System.getenv("XDG_SESSION_TYPE");
 
-        if (!glfwInit())
-            throw new IllegalStateException("Unable to initialize GLFW");
+            // Use .equals() for string comparison
+            if (sessionType != null && sessionType.equalsIgnoreCase("wayland") &&
+                    glfwPlatformSupported(GLFW_PLATFORM_WAYLAND)) {
+                glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_WAYLAND);
+            } else {
+                // Fallback to X11 if Wayland isn't supported or session is X11
+                glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11);
+            }
+        } else {
+            // For non-Linux systems, use any platform
+            glfwInitHint(GLFW_PLATFORM, GLFW_ANY_PLATFORM);
+        }
 
+
+
+        if (!glfwInit()) {// Sometimes, GLFW advertises Wayland support, although it doesn't really work...
+
+        }
         // Get the resolution of the primary monitor
         GLFWVidMode vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
         int screenWidth = vidmode.width();

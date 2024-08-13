@@ -4,27 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="organizing everything">
-      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ProjectionManager.java" afterDir="false" />
+    <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="adding wayland support">
+      <change afterPath="$PROJECT_DIR$/res/stanford-bunny.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/WJGE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WJGE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/WJGE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/Main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Camera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/KeyInvoke.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/KeyInvoke.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hs_err_pid46544.log" beforeDir="false" afterPath="$PROJECT_DIR$/hs_err_pid46544.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/WindowCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/WindowCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/KeyInvoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/KeyInvoke.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/OBJLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/OBJLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/WindowCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WindowCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +44,13 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:Shreyank6189/WJGE.git&quot;,
-    &quot;accountId&quot;: &quot;7802676a-1b1a-4b85-8156-f5c10cab1710&quot;
+    &quot;url&quot;: &quot;https://github.com/Shreyank6189/WJGE.git&quot;,
+    &quot;accountId&quot;: &quot;9ddc281b-8a84-44fc-9bc1-4a015963d6f0&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jrt:///usr/lib/jvm/java-22-openjdk!/java.desktop/javax/imageio/ImageIO.class" root0="SKIP_INSPECTION" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -85,9 +81,10 @@
     &quot;Application.WJGE.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/WJGE PROJECT SAVE/WJGE&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/shreyank6189/IdeaProjects/WJGE/res&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -107,6 +104,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -115,22 +117,30 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WJGE">
+  <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <shortenClasspath name="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.WJGE" />
-    </list>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.300" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.300" />
       </set>
     </attachedChunks>
   </component>
@@ -161,6 +171,14 @@
       <workItem from="1720704924173" duration="513000" />
       <workItem from="1720705450059" duration="1720000" />
       <workItem from="1720822795179" duration="128000" />
+      <workItem from="1723375791613" duration="5924000" />
+      <workItem from="1723436589048" duration="609000" />
+      <workItem from="1723473860023" duration="1322000" />
+      <workItem from="1723564783057" duration="3557000" />
+      <workItem from="1723581513370" duration="760000" />
+      <workItem from="1723582365612" duration="768000" />
+      <workItem from="1723583302037" duration="719000" />
+      <workItem from="1723584147971" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -291,7 +309,8 @@
     <MESSAGE value="FIXING MOVING SYSTEM" />
     <MESSAGE value="added a inprogress camera" />
     <MESSAGE value="organizing everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="organizing everything" />
+    <MESSAGE value="adding wayland support" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding wayland support" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -303,7 +322,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/utils/WindowCreator.java</url>
-          <line>61</line>
+          <line>77</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
