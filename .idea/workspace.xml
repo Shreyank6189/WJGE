@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b224fcda-aa16-4c36-9e1e-ca43abbf67b2" name="Changes" comment="adding wayland support">
-      <change afterPath="$PROJECT_DIR$/res/stanford-bunny.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WJGE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WJGE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/WJGE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/GameLoop/gameLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/shaders/StaticShader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/Renderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/production/WJGE/utils/WindowCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/production/WJGE/utils/WindowCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameLoop/gameLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/WindowCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/WindowCreator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +166,7 @@
       <workItem from="1723581513370" duration="760000" />
       <workItem from="1723582365612" duration="768000" />
       <workItem from="1723583302037" duration="719000" />
-      <workItem from="1723584147971" duration="338000" />
+      <workItem from="1723584147971" duration="1720000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -284,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715777550587</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adding wayland support">
+      <option name="closed" value="true" />
+      <created>1723584635813</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723584635813</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
