@@ -35,7 +35,7 @@ public class RawModel {
         return vertexCount;
     }
 
-    public int getTextureID(){
+    public Integer getTextureID(){
         return this.id;
     }
 

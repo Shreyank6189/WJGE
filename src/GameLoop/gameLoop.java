@@ -112,14 +112,15 @@ public long window;
     }
 
     public void initWindow() {
-        RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
 
-        model.addTextureID(loader.loadTexture("res/OIP.png"));
+       // RawModel model = loader.loadToVAO(vertices, textureCoords,indices);
+
+         // model.addTextureID(loader.loadTexture("res/OIP.png"));
         StaticShader shader = new StaticShader();
         EntitieList entitieList = new EntitieList();
 
 
-        Entities entity1 = new Entities(model,new Vector3f(0,0,0), entitieList);
+        Entities entity1 = new Entities("res/stanford-bunny.obj",new Vector3f(0,0,0), entitieList);
         while (!glfwWindowShouldClose(window)) {
             ProjectionManager projectionManager = new ProjectionManager(window, entitieList, windowcrt);
             Renderer renderer = new Renderer(shader, windowcrt, projectionManager);
